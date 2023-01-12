@@ -5,3 +5,8 @@
  The code first creates a MongoClient instance, which will allow you to connect to a MongoDB server running on the localhost on port 27017.
 
 Then, it defines an endpoint /facebook/{username} that accepts a post_main_topic parameter. The endpoint uses the get_posts function from the facebook_scraper package to scrape posts from Facebook based on the provided main topic and the pages parameter is set to 3, so the function will scrape 3 pages of data.
+
+To run the service  use the following commands:
+ * docker build -t scraping .
+ * docker run --network="host" scraping
+ * python test_file.py
