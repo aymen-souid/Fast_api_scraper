@@ -18,7 +18,7 @@ async def scraping_function(username: str):
 
         # if we choose a value less than 2, we risk of not getting data from this code instruction
         facebook_posts = list(get_posts(username,
-                                        pages=3))
+                                        pages=3, credentials=("******@hotmail.com","*****")))
         for post in facebook_posts:
             mydb = client['Scraping']
             information = mydb.facebookposts
